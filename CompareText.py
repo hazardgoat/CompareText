@@ -2,22 +2,8 @@
 # Additionally, it creates two .txt files that each contain the enumerated "sentences" for files 1 & 2, split at periods.
 # This allows for more easily referencing the context of any differences that are found.
 
-
-
 # import regular expressions
 import re
-
-
-# establishes paths to text for comparison
-f1 = 'A.txt'
-f2 = 'B.txt'
-# establishes the names of the text documents that will be generated
-docNames = ['File_1_Enumerated_Sentences.txt', 'File_2_Enumerated_Sentences.txt', 'Differences.txt']
-# establishes whether to parse text assuming mostly correct grammer (regular) or not (irregular)
-textType = ['regular', 'irregular']
-textType = textType[0]
-
-
 
 # compares file 1 against file 2 and returns any differences between them
 def CompareText(f1, f2, docNames, textType):
@@ -114,6 +100,14 @@ def CompareText(f1, f2, docNames, textType):
         break
 
 
+# establishes paths to text for comparison
+f1 = 'A.txt'
+f2 = 'B.txt'
+# establishes the names of the text documents that will be generated
+docNames = ['File_1_Enumerated_Sentences.txt', 'File_2_Enumerated_Sentences.txt', 'Differences.txt']
+# establishes whether to parse text assuming mostly correct grammer (regular) or not (irregular)
+textType = ['regular', 'irregular']
+textType = textType[0]
 
 # Runs the text comparison function
 CompareText(f1, f2, docNames, textType)
